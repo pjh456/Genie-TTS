@@ -53,6 +53,7 @@ dependencies = [
 
 [project.optional-dependencies]
 gui = ["PySide6"]
+dev = ["pytest"]
 
 
 [project.urls]
@@ -79,6 +80,9 @@ ignore = [
     "B904",  # 异常衔接（from/from None）需逐一确认
     "B905",  # zip 改 strict 可能改变行为
 ]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
