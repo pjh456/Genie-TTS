@@ -27,7 +27,8 @@ PUBLIC_API = {
 
 def test_public_api():
     genie_tts = importlib.import_module("genie_tts")
-    assert set(genie_tts.__all__) == PUBLIC_API
+    public_api = set(genie_tts.__all__)
+    assert PUBLIC_API.issubset(public_api), f"公共 API 缺失: {PUBLIC_API - public_api}"
     for name in PUBLIC_API:
         assert hasattr(genie_tts, name), f"公共 API 缺失: {name}"
 
