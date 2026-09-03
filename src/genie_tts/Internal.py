@@ -23,8 +23,8 @@ onnxruntime.set_default_logger_severity(3)
 from pathlib import Path
 import json
 import asyncio
-from typing import AsyncIterator, Optional, Union
-import numpy as np, Dict
+from typing import AsyncIterator, Optional, Union, Dict
+import numpy as np
 
 from .Audio.ReferenceAudio import ReferenceAudio
 from .Core.Resources import ensure_exists, Chinese_G2P_DIR, English_G2P_DIR
